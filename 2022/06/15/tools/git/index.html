@@ -1,0 +1,1927 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="git, 神奈川">
+    <meta name="description" content="git 分布式管理">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    
+
+    <title>git | 神奈川</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">神奈川</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">神奈川</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">git</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/javascript/">
+                                <span class="chip bg-color">javascript</span>
+                            </a>
+                        
+                            <a href="/tags/git/">
+                                <span class="chip bg-color">git</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-06-15
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="集中式svn"><a class="markdownIt-Anchor" href="#集中式svn">#</a> 集中式 (svn)</h1>
+<ul>
+<li>svn 因为每次存的都是差异 需要的硬盘空间会相对的小一点  可是回滚的速度会很慢
+<ul>
+<li>优点:<br>
+ 代码存放在单一的服务器上 便于项目的管理</li>
+<li>缺点:<br>
+ 服务器宕机：员工写的代码得不到保障<br>
+服务器炸了：整个项目的历史记录都会丢失</li>
+</ul>
+</li>
+</ul>
+<h1 id="分布式git"><a class="markdownIt-Anchor" href="#分布式git">#</a> 分布式 (git)</h1>
+<ul>
+<li>git 每次存的都是项目的完整快照 需要的硬盘空间会相对大一点  (Git 团队对代码做了极致的压缩 最终需要的实际空间比 svn 多不了太多 可是 Git 的回滚速度极快)
+<ul>
+<li>优点：完全的分布式</li>
+<li>缺点：学习起来比 SVN 陡峭</li>
+</ul>
+</li>
+</ul>
+<h1 id="git配置"><a class="markdownIt-Anchor" href="#git配置">#</a> Git 配置</h1>
+<ul>
+<li>Git 初始化配置<br>
+一般在新的系统上，我们都需要先配置下自己的 Git 工作环境。配置工作只需一次，以后升级时还会沿用现在的配置。当然，如果需要，你随时可以用相同的命令修改已有的配置。<br>
+Git 提供了一个叫做 git config 的命令来配置或读取相应的工作环境变量而正是由这些环境变量，决定了 Git 在各个环节的具体工作方式和行为。这些变量可以存放</li>
+</ul>
+<hr>
+<p>在以下三个不同的地方：</p>
+<ul>
+<li>/etc/gitconfig 文件：系统中对所有用户都普遍适用的配置。若使用 git config 时用 --system 选项，读写的就是这个文件。</li>
+<li>~/.gitconfig 文件：用户目录下的配置文件只适用于该用户。若使用 git config 时用 --global 选项，读写的就是这个文件。</li>
+<li>.git/config 文件：当前项目的 Git 目录中的配置文件（也就是工作目录中的 .git/config 文件）这里的配置仅仅针对当前项目有效。</li>
+<li>每一个级别的配置都会覆盖上层的相同配置</li>
+</ul>
+<hr>
+<ul>
+<li>配置内容 ： 用户信息 ：</li>
+<li>第一个要配置的是你个人的用户名称和电子邮件地址。这两条配置很重要，每次 Git 提交时都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被永久纳入历史记录：</li>
+<li><code>git config --global user.name &quot;damu&quot; </code>  – 生成 user.name 的全局配置</li>
+<li><code>git config --global user.email &quot;damu@example.com &quot;</code>   – 生成 user.email 的全局配置</li>
+<li>要检查已有的配置信息，可以使用 	git config --list 命令</li>
+<li>删除配置信息 git config --global --unset user.email</li>
+</ul>
+<h1 id="初始化新仓库"><a class="markdownIt-Anchor" href="#初始化新仓库">#</a> 初始化新仓库</h1>
+<p>命令：git init<br>
+ 解析：要对现有的某个项目开始用 Git 管理，只需到此项目所在的目录，执行：git init<br>
+ 作用：初始化后，在当前目录下会出现一个名为 .git 的目录，所有 Git 需要的数据和资源都存放在这个目录中。不过目前，仅仅是按照既有的结构框架初始化好了里边所有的文件和目录，但我们还没有开始跟踪管理项目中的任何一个文件。<br>
+ .git 目录<br>
+<img src="https://img-blog.csdnimg.cn/20210325143041122.png" alt="在这里插入图片描述"></p>
+<ul>
+<li>hooks  – 目录包含客户端或服务端的钩子脚本</li>
+<li>info – 包含一个全局性排除文件</li>
+<li>logs – 保存日志信息</li>
+<li><strong>objects – 目录存储所有数据内容</strong></li>
+<li><strong>refs – 目录存储指向数据的提交对象的指针（分支）</strong></li>
+<li>config – 文件包含项目特有的配置选项</li>
+<li>description – 用来显示对仓库的描述信息</li>
+<li><strong>HEAD – 文件指示目前被检出的分支</strong></li>
+<li><strong>index – 文件保存暂存区的信息</strong></li>
+</ul>
+<hr>
+<h1 id="基本环境概念"><a class="markdownIt-Anchor" href="#基本环境概念">#</a> 基本环境概念</h1>
+<h2 id="区域"><a class="markdownIt-Anchor" href="#区域">#</a> 区域</h2>
+<ul>
+<li>工作区
+<ul>
+<li>沙箱环境 - 修改文件</li>
+</ul>
+</li>
+<li>暂存区
+<ul>
+<li>修改的文件后暂存</li>
+</ul>
+</li>
+<li>版本库
+<ul>
+<li>存储版本</li>
+</ul>
+</li>
+</ul>
+<h2 id="底层命令对象"><a class="markdownIt-Anchor" href="#底层命令对象">#</a> 底层命令对象</h2>
+<ul>
+<li>git 对象<br>
+ git hash-object -w fileUrl : 生成一个 key (hash 值):val (压缩后的文件内容) 键值对存到.git/objects</li>
+<li>tree 对象<br>
+ git update-index --add --cacheinfo 100644 hash test.txt : 往暂存区添加一条记录 (让 git 对象 对应 上文件名) 存到.git/index<br>
+git write-tree : 生成树对象存到.git/objects</li>
+<li>commit 对象	<br>
+echo ‘first commit’ | git commit-tree treehash : 生成一个提交对象存到.git/objects</li>
+<li>对以上对象的查询<br>
+ git cat-file -p hash       : 拿对应对象的内容<br>
+ git cat-file -t hash       : 拿对应对象的类型</li>
+</ul>
+<h2 id="查看暂存区"><a class="markdownIt-Anchor" href="#查看暂存区">#</a> 查看暂存区</h2>
+<ul>
+<li>git ls-files -s</li>
+</ul>
+<hr>
+<h1 id="git-底层概念底层命令基础的-linux-命令"><a class="markdownIt-Anchor" href="#git-底层概念底层命令基础的-linux-命令">#</a> Git 底层概念（底层命令）基础的 linux 命令</h1>
+<ul>
+<li>clear ：清除屏幕</li>
+<li>echo ‘test content’：往控制台输出信息 echo ‘test content’ &gt; test.txt</li>
+<li>ll ：将当前目录下的 子文件 &amp; 子目录平铺在控制台</li>
+<li>find 目录名： 将对应目录下的子孙文件 &amp; 子孙目录平铺在控制台 find 目录名 -type f ：将对应目录下的文件平铺在控制台</li>
+<li>rm  文件名 ： 删除文件</li>
+<li>mv 源文件 重命名文件：重命名</li>
+<li>cat 文件的 url : 查看对应文件的内容 vim 文件的 url (在英文模式下)</li>
+<li>按 i 进插入模式  进行文件的编辑</li>
+<li>按 esc 键 &amp; 按：键 进行命令的执行</li>
+<li>q!   强制退出（不保存）</li>
+<li>wq  保存退出</li>
+<li>set nu 设置行号</li>
+</ul>
+<hr>
+<h1 id="git对象-文件的一次性版本"><a class="markdownIt-Anchor" href="#git对象-文件的一次性版本">#</a> Git 对象 - 文件的一次性版本</h1>
+<p>Git 的核心部分是一个简单的键值对数据库。你可以向该数据库插入任意类型<br>
+的内容，它会返回一个键值，通过该键值可以在任意时刻再次检索该内容</p>
+<ul>
+<li>
+<p>向数据库写入内容 并返回对应键值<br>
+命令：  <code>echo 'test content' | git hash-object -w --stdin </code> <br>
+ <code>-w</code>  选项指示 hash-object 命令存储数据对象；若不指定此选项，则该命令仅返回对应的键值<br>
+ <code> --stdin</code> （standard input）选项则指示该命令从标准输入读取内容；若不指定此选项，则须在命令尾部给出待存储文件的路径<br>
+ <code>git hash-object -w 文件的路径 </code>  ：  存文件<br>
+ <code>git hash-object 文件的路径</code>   ：  返回对应文件的键值  d670460b4b4aece5915caf5c68d12f560a9fe3e4<br>
+ 返回： 该命令输出一个长度为 40 个字符的校验和。 这是一个 SHA-1 哈希值</p>
+</li>
+<li>
+<p>查找存储数据的<br>
+ <code>find .git/objects -type f</code>  – 查找命令路径下的存储数据</p>
+</li>
+<li>
+<p>根据键值拉取数据<br>
+ <code>git cat-file</code>   <code>-p</code> / <code>-t</code>  d670460b4b4aece5915caf5c68d12f560a9fe3e4<br>
+-p 选项可指示该命令自动判断内容的类型，并为我们显示格式友好的内容  返回： 对应文件的内容<br>
+ - t 返回它的类型   一般是 bolb 类型</p>
+</li>
+<li>
+<p>单个文件的写入</p>
+<ul>
+<li><code> git hash-object -w test.txt</code>  – 把 test.txt 文件写入到存储数据中</li>
+<li><code>find ./.git/objects/ -type f</code>  – 查看所有写入的数据</li>
+<li><code>git cat-file -p ddbb2d26d3ff8b7afd7eca2b75a60c7f19be97cc</code>  – 查看 hash 值压缩后的源文内容</li>
+</ul>
+</li>
+</ul>
+<h1 id="构建树对象-项目的一次性版本"><a class="markdownIt-Anchor" href="#构建树对象-项目的一次性版本">#</a> 构建树对象 - 项目的一次性版本</h1>
+<p>树对象（tree object），它能解决文件名保存的问题，也允许我们将多个文件组织到一起。Git 以一种类似于 UNIX 文件系统的方式存储内容。所有内容均以树对象和数据对象 (git 对象) 的形式存储，其中树对象对应了 UNIX 中的目录项，数据对象 (git 对象) 则大致上对应文件内容。一个树对象包含了一条或多条记录（每条记录含有一个指向 git 对象或者子树对象的 SHA-1 指针，以及相应的模式、类型、文件名信息）。一个树对象也可以包含另一个树对象。<br>
+我们可以通过  <code>update-index</code> ； <code>write-tree</code> ； <code>read-tree</code>  等命令来构建树对像并 <code>塞入到暂存区</code> 。</p>
+<hr>
+<p>假设我们做了一系列操作之后得到一个树对像 操作</p>
+<ul>
+<li>利用 update-index 命令 为 test.txt 文件的首个版本 —— 创建一个暂存区。并通过 write-tree 命令生成树对像。<br>
+命令：<br>
+git update-index --add --cacheinfo 100644   83baae61804e65cc73a7201a7252750c76066a30  test.txt<br>
+git write-tree</li>
+<li>文件模式为
+<ul>
+<li>100644，表明这是一个普通文件</li>
+<li>100755，表示一个可执行文件；</li>
+<li>120000，表示一个符号链接。</li>
+</ul>
+</li>
+<li>–add 选项：<br>
+因为此前该文件并不在暂存区中 首次需要 —add</li>
+<li>–cacheinfo 选项：<br>
+因为将要添加的文件位于 Git 数据库中，而不是位于当前目录下 所有需要 —cacheinfo</li>
+</ul>
+<hr>
+<ul>
+<li>新增 new.txt 将 new.txt 和 test.txt 文件的第二个个版本<br>
+塞入暂存区。并通过 write-tree 命令生成树对像。<br>
+命令： echo ‘new file’ &gt; new.txt<br>
+git update-index --cacheinfo 100644   1f7a7a472abf3dd9643fd615f6da379c4acb3e3a test.txt<br>
+git update-index --add new.txt<br>
+git write-tree</li>
+</ul>
+<hr>
+<ol start="3">
+<li>将第一个树对象加入第二个树对象，使其成为新的树对象<br>
+命令：<br>
+git read-tree  --prefix=bak d8329fc1cc938780ffdd9f94e0d364e0ea74f579<br>
+git write-tree<br>
+read-tree 命令，可以把树对象读入暂存区</li>
+</ol>
+<hr>
+<ul>
+<li>git cat-file -p master^{tree}（或者是树对象的 hash）
+<ul>
+<li>master^{tree} 语法表示 master 分支上最新的提交所指向的树对象。</li>
+</ul>
+</li>
+<li>解析树对象<br>
+ Git 根据某一时刻暂存区（即 index 区域）所表示的状态创建并记录一个对应的树对象，如此重复便可依次记录（某个时间段内）一系列的树对象。其实树对象是对暂存区内操作的抽象，这颗树对象相对于就是快照。当我们的工作区有任何更改同步到暂存区时。便会调用 write-tree 命令通过 write-tree 命令向暂存区内容写入一个树对象。它会根据当前暂存区状态自动创建一个新的树对象。即每一次同步都产生一颗树对象。且该命令会返回一个 hash 指向树对象。在 Git 中每一个文件（数据）都对应一个 hash（类型 blob）每一个树对象都对应一个 hash（类型 tree）
+<ul>
+<li>总结<br>
+我们可以认为树对象就是我们项目的快照</li>
+</ul>
+</li>
+</ul>
+<h1 id="提交对象"><a class="markdownIt-Anchor" href="#提交对象">#</a> 提交对象</h1>
+<p>我们可以通过调用 commit-tree 命令创建一个提交对象，为此需要指定一个树对象的 SHA-1 值，以及该提交的父提交对象（如果有的话 第一次将暂存区做快照就没有父对象）</p>
+<ul>
+<li>创建提交对象<br>
+ echo ‘first commit’ | git commit-tree d8329f<br>
+ 返回： fdf4fc3344e67ab068f836878b6c4951e3b15f3d （hash 值）</li>
+<li>查看提交对象<br>
+ git cat-file -p fdf4fc3<br>
+ 返回： tree d8329fc1cc938780ffdd9f94e0d364e0ea74f579</li>
+<li>提交对象的格式<br>
+提交对象的格式很简单：它先指定一个顶层树对象，代表当前项目快照；然后是作者 / 提交者信息（依据你的 <a href="http://user.name">user.name</a> 和 user.email 配置来设定，外加一个时间戳）；留空一行，最后是提交注释<br>
+接着，我们将创建另两个提交对象，它们分别引用各自的上一个提交（作为其父提交对象）：<br>
+echo ‘second commit’ | git commit-tree 0155eb -p fdf4fc3  （提交对象是链式的除了第一个没有大佬，其它的版本都要带上它的上一个版本   0155eb（第二个版本） -p fdf4fc3（第一个版本） ）<br>
+echo ‘third commit’ | git commit-tree 3c4e9c -p cac0cab</li>
+<li>注意<br>
+ git commit-tree 不但生成提交对象 而且会将对应的快照（树对象）提交到本地库中</li>
+</ul>
+<h1 id="流程简化操做-高层命令-crud"><a class="markdownIt-Anchor" href="#流程简化操做-高层命令-crud">#</a> 流程简化操做 （高层命令 -CRUD）</h1>
+<p>创建工作目录 对工作目录进行修改</p>
+<ul>
+<li>git init  初始化仓库</li>
+</ul>
+<hr>
+<ul>
+<li>git status   – 查看文件的状态</li>
+<li>git diff（不加参数）—(当前做的哪些更新还没有暂存)</li>
+<li>带参数:git diff –cached 或者 git diff –staged  (- 推荐)(已更新已经暂存起来准备好了还没有提交？)</li>
+<li>git  log  --oneline /--pretty=oneline  – 查看提交的历史版本记录</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p>git add ./</p>
+<ul>
+<li>git hash-object -w 文件名 (修改多少个工作目录中的文件，此命令就要被执行多少次)</li>
+<li>git update -index --add …</li>
+</ul>
+</li>
+<li>
+<p>git rm 文件名  删除文件目录中对应的文件 再将修改添加到暂存区</p>
+</li>
+<li>
+<p>git mv 源文件名 新文件名   将文件工作目录的文件进行重命名 再将修改添加到暂存区</p>
+<hr>
+</li>
+<li>
+<p><code>git commit  vim</code>  – 提交</p>
+</li>
+<li>
+<p><code>git commit -a </code>   – 跳过暂存区</p>
+</li>
+<li>
+<p><code>git commit -m “”</code>    – 注释内容</p>
+</li>
+<li>
+<p><code>git commit -a -m  “”</code>   注释内容  跳过暂存区</p>
+</li>
+<li>
+<p><code>gir write-tree</code>  – 写入树</p>
+</li>
+<li>
+<p><code>git commit-tree</code>  – 提交树</p>
+</li>
+</ul>
+<hr>
+<h1 id="分支操作"><a class="markdownIt-Anchor" href="#分支操作">#</a> 分支操作</h1>
+<ul>
+<li>
+<p><code>git branch</code>   – 显示分支的列表</p>
+</li>
+<li>
+<p><code>git branch  分支名字</code>   – 创建一个分支</p>
+</li>
+<li>
+<p><code>git branch -v</code>   — 可以查看每一个分支的最后一次提交</p>
+</li>
+<li>
+<p><code>git branch  </code>   <code>-d</code>  /  <code>-D </code>  名字 `  – 删除分支 -D 强行删除</p>
+</li>
+<li>
+<p><code>git checkout  lys(分支名)</code>   – 切换分支</p>
+</li>
+<li>
+<p><code>git log --oneline --decorate --graph --all</code>   – 查看项目分叉历史</p>
+</li>
+<li>
+<p><code>git merge 分支名</code>   – 分支合并</p>
+</li>
+<li>
+<p>git branch –merged  查看哪些分支已经合并到当前分支，在这个列表中分支名字前没有 * 号的分支通常可以使用  <code>git branch -d</code>  删除掉；</p>
+</li>
+<li>
+<p><code>git config --global alias.名字   命令的名字</code>   –  给命令（指令）起别名方便使用</p>
+<ul>
+<li><code>git config --global alias.lol  &quot;log --oneline --decorate --graph --all&quot; </code>  （把命令别名为 lol）运行时 git lol 即可</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<h1 id="tag-标签"><a class="markdownIt-Anchor" href="#tag-标签">#</a> Tag 标签</h1>
+<ul>
+<li><code>git tag </code>  – 列出标签</li>
+<li><code>git tag  tagname</code>    – 给当前分支，版本起标签名</li>
+<li><code>git  tag  tagname  commitHash</code>   – 给指定的版本（Hash）起标签名</li>
+<li><code>git show  tagname</code>    – 查看指定标签信息</li>
+<li><code>git tag -d  tagname</code>    – 删除指定的标签 v1.0</li>
+<li><code>git checkout  tagname</code>   – 检出切换指定标签版本（如果指定的标签版本没有分支会产生头部分离的情况需要 给 它 起一条分支  <code> git checkout -b “v1.0”</code> ）</li>
+</ul>
+<h1 id="命令的总结使用"><a class="markdownIt-Anchor" href="#命令的总结使用">#</a> 命令的总结使用</h1>
+<h2 id="安装"><a class="markdownIt-Anchor" href="#安装">#</a> 安装</h2>
+  <pre class="line-numbers language-none"><code class="language-none">git --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="初始化配置"><a class="markdownIt-Anchor" href="#初始化配置">#</a> 初始化配置</h2>
+<pre class="line-numbers language-none"><code class="language-none">git config --global user.name &quot;damu&quot;
+git config --global user.email damu@example.com    
+git config --list<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="初始化仓库"><a class="markdownIt-Anchor" href="#初始化仓库">#</a> 初始化仓库</h2>
+<pre class="line-numbers language-none"><code class="language-none">git init
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="c新增"><a class="markdownIt-Anchor" href="#c新增">#</a> C (新增)</h2>
+<p>在工作目录中新增文件<br>
+<pre class="line-numbers language-none"><code class="language-none">git status
+git add .&#x2F;
+git commit -m &quot;msg&quot;    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></p>
+<h2 id="u修改"><a class="markdownIt-Anchor" href="#u修改">#</a> U (修改)</h2>
+  <pre class="line-numbers language-none"><code class="language-none">
+在工作目录中修改文件
+   git status
+   git add .&#x2F;
+   git commit -m &quot;msg&quot;     <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="d删除-重命名"><a class="markdownIt-Anchor" href="#d删除-重命名">#</a> D (删除 &amp; 重命名)</h2>
+<pre class="line-numbers language-none"><code class="language-none">git rm 要删除的文件     git mv 老文件 新文件
+git  status             git  status
+git commit -m &quot;msg&quot;     git commit -m &quot;msg&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="r查询"><a class="markdownIt-Anchor" href="#r查询">#</a> R (查询)</h2>
+<pre class="line-numbers language-GIT" data-language="GIT"><code class="language-GIT">git  status   :  查看工作目录中文件的状态(已跟踪(已提交 已暂存 已修改) 未跟踪)
+git  diff     :  查看未暂存的修改
+git  diff --cache : 查看未提交的暂存
+git  log --oneline : 查看提交记录
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="分支"><a class="markdownIt-Anchor" href="#分支">#</a> 分支</h2>
+<ul>
+<li>分支的本质其实就是一个提交对象！！！</li>
+<li>HEAD:<br>
+ 是一个指针 它默认指向 master 分支 切换分支时其实就是让 HEAD 指向不同的分支<br>
+每次有新的提交时 HEAD 都会带着当前指向的分支 一起往前移动<br>
+ <code>git  log --oneline --decorate --graph --all</code>  : 查看整个项目的分支图<br>
+ <code>git branch</code>  : 查看分支列表<br>
+ <code>git branch -v</code> : 查看分支指向的最新的提交<br>
+ <code>git branch name</code>  : 在当前提交对象上创建新的分支<br>
+ <code>git branch name commithash</code> : 在指定的提交对象上创建新的分支<br>
+ <code>git checkout name</code>  :     切换分支<br>
+ <code>git branch -d name</code>  : 删除空的分支 删除已经被合并的分支<br>
+ <code>git branch -D name</code>  : 强制删除分支</li>
+</ul>
+<h1 id="分支操作-2"><a class="markdownIt-Anchor" href="#分支操作-2">#</a> 分支操作</h1>
+<h2 id="git分支本质"><a class="markdownIt-Anchor" href="#git分支本质">#</a> git 分支本质</h2>
+<p>分支本质是一个提交对象，所有的分支都会有机会被 HEAD 所引用 (HEAD 一个时刻只会指向一个分支)<br>
+ 当我们有新的提交的时候 HEAD 会携带当前持有的分支往前移动</p>
+<h2 id="git分支命令"><a class="markdownIt-Anchor" href="#git分支命令">#</a> git 分支命令</h2>
+<ul>
+<li>创建分支  : <code> git branch branchname</code></li>
+<li>切换分支  :  <code>git checkout  branchname</code></li>
+<li>创建 &amp; 切换分支   :  <code>git checkout -b branchname</code></li>
+<li>版本穿梭 (时光机) :   <code>git branch branchname commitHash  </code></li>
+<li>普通删除分支    :  <code>git  branch -d branchname</code></li>
+<li>强制删除分支   : <code> git  branch -D branchname</code></li>
+<li>合并分支   :  <code>git merge branchname</code> <br>
+ 快进合并 --&gt; 不会产生冲突<br>
+典型合并 --&gt; 有机会产生冲突</li>
+<li>解决冲突 --&gt; 打开冲突的文件 进行修改 add commit</li>
+<li>查看分支列表 :  <code>git branch</code> <br>
+ 查看合并到当前分支的分支列表: git branch --merged<br>
+ 一旦出现在这个列表中 就应该删除<br>
+查看没有合并到当前分支的分支列表: git branch --no-merged<br>
+ 一旦出现在这个列表中 就应该观察一下是否需要合并</li>
+</ul>
+<h2 id="git分支的注意点-存储"><a class="markdownIt-Anchor" href="#git分支的注意点-存储">#</a> git 分支的注意点 &amp; 存储</h2>
+<ul>
+<li>
+<p>在切换的时候 一定要保证当前分支是干净的！！！</p>
+<ul>
+<li>允许切换分支:<br>
+ 分支上所有的内容处于 已提交状态<br>
+ (避免) 分支上的内容是初始化创建 处于未跟踪状态<br>
+ (避免) 分支上的内容是初始化创建 第一次处于已暂存状态</li>
+<li>不允许切分支:<br>
+ 分支上所有的内容处于 已修改状态  或 第二次以后的已暂存状态</li>
+</ul>
+</li>
+<li>
+<p>在分支上的工作做到一半时 如果有切换分支的需求，我们应该将现有的工作存储起来<br>
+ <code> git stash</code>  : 会将当前分支上的工作推到一个栈中<br>
+分支切换  进行其他工作 完成其他工作后 切回原分支<br>
+ <code>git stash apply</code>  : 将栈顶的工作内容还原 但不让任何内容出栈<br>
+ <code>git stash drop</code>   : 取出栈顶的工作内容后 就应该将其删除 (出栈)<br>
+ <code>git stash pop</code>    :       <code>git stash apply +  git stash drop </code> <br>
+ <code> git stash list</code>  : 查看存储</p>
+</li>
+</ul>
+<h2 id="后悔药"><a class="markdownIt-Anchor" href="#后悔药">#</a> 后悔药</h2>
+<ul>
+<li>撤销工作目录的修改   :   <code>git checkout -- filename</code></li>
+<li>撤销暂存区的修改     :   <code>git reset HEAD  filename</code>      git restore --staged baidu.txt</li>
+<li>撤销提交  :   <code>git commit --amend</code></li>
+</ul>
+<h2 id="reset三部曲"><a class="markdownIt-Anchor" href="#reset三部曲">#</a> reset 三部曲</h2>
+<ul>
+<li><code> git reset --soft commithash</code>     —&gt; 用 commithash 的内容重置 HEAD 内容</li>
+<li><code>git reset [--mixed] commithash</code>  —&gt; 用 commithash 的内容重置 HEAD 内容 重置暂存区</li>
+<li><code>git reset --hard commithash</code>     —&gt; 用 commithash 的内容重置 HEAD 内容 重置暂存区 重置工作目录</li>
+</ul>
+<h2 id="路径reset"><a class="markdownIt-Anchor" href="#路径reset">#</a> 路径 reset</h2>
+<ul>
+<li>所有的路径 reset 都要省略第一步！！！<br>
+ 第一步是重置 HEAD 内容  我们知道 HEAD 本质指向一个分支 分支的本质是一个提交对象<br>
+提交对象 指向一个树对象 树对象又很有可能指向多个 git 对象 一个 git 对象代表一个文件！！！<br>
+HEAD 可以代表一系列文件的状态！！！</li>
+<li>git reset [–mixed] commithash filename<br>
+ 用 commithash 中 filename 的内容重置暂存区</li>
+</ul>
+<h2 id="checkout深入理解"><a class="markdownIt-Anchor" href="#checkout深入理解">#</a> checkout 深入理解</h2>
+<ul>
+<li>
+<p>git   checkout brancname  跟   git reset --hard commithash 特别像</p>
+<ul>
+<li>共同点<br>
+都需要重置 HEAD   暂存区   工作目录</li>
+<li>区别<br>
+ checkout 对工作目录是安全的    reset --hard 是强制覆盖<br>
+ checkout 动 HEAD 时不会带着分支走而是切换分支<br>
+ reset --hard 时是带着分支走</li>
+</ul>
+</li>
+<li>
+<p>checkout + 路径<br>
+ * git checkout commithash  filename<br>
+ 重置暂存区<br>
+重置工作目录<br>
+ * git checkout – filename<br>
+ 重置工作目录</p>
+</li>
+</ul>
+<h1 id="eslint"><a class="markdownIt-Anchor" href="#eslint">#</a> eslint</h1>
+<p>js 代码的检查工具<br>
+下载: npm i eslint -D<br>
+ 使用:<br>
+ 生成配置文件 npx eslint --init<br>
+ 检查 js 文件   npx eslint 目录名<br>
+命中的规则:<br>
+ 字符串必须使用单引号<br>
+语句结尾不能有分号<br>
+文件的最后必须要有换行</p>
+<h2 id="eslint结合git"><a class="markdownIt-Anchor" href="#eslint结合git">#</a> eslint 结合 git</h2>
+<p>husky: 哈士奇，为 Git 仓库设置钩子程序<br>
+使用<br>
+在仓库初始化完毕之后 再去安装哈士奇<br>
+在 package.json 文件写配置</p>
+<pre class="line-numbers language-language-JSON"><code class="language-language-JSON">        "husky": &#123;
+            "hooks": &#123;
+              "pre-commit": "npm run lint"   
+              //在git commit之前一定要通过npm run lint的检查
+              // 只有npm run lint不报错时 commit才能真正的运行
+            &#125;
+          &#125;  
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="远程操作仓库常用命令"><a class="markdownIt-Anchor" href="#远程操作仓库常用命令">#</a> 远程操作仓库常用命令</h1>
+<ul>
+<li><code>git remote add &lt; shortname &gt; &lt; url&gt;</code>    – 添加一个新的远程 Git 仓库，同时指定一个你可以轻松引用的简写</li>
+<li><code>git remote –v</code>   – 显示远程仓库使用的 Git 别名与其对应的 URL</li>
+<li><code>git branch -vv</code>  – 查看设置的所有分支跟踪</li>
+<li><code>git remote show [remote-name]</code>   – 查看某一个远程仓库的更多信息</li>
+<li><code>git remote rename pb paul</code>   – 重命名</li>
+<li><code>git remote rm [remote-name]</code>   – 如果因为一些原因想要移除一个远程仓库 - 你已经从服务器上搬走了或不再想使用某一个特定的镜像了，又或者某一个贡献者不再贡献了</li>
+<li><code>git config --global  --unset user.name  [name] </code>   – <a href="http://xn--user-4s8f41bp88b6r3c10qe14bpyl.name">删除全局配置的 user.name</a>  其中 <code>[name]</code>  可以不写</li>
+<li><code>git config --global  --unset user.email  [name] </code>   – 删除全局配置的 user.email 其中 <code>[name]</code>  可以不写</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p><code>git push [remote-name] [branch-name]</code>  – 将本地项目的 master 分支推送到 origin （别名）服务器</p>
+</li>
+<li>
+<p><code>git clone url </code>    – 克隆一个远程仓库到本地（克隆时不需要 git init）默认克隆时为远程仓库起的别名为 origin</p>
+</li>
+<li>
+<p><code>git fetch [remote-name]</code>  – 这个命令会访问远程仓库，从中拉取所有你还没有的数据。 执行完成后，你将会拥有那个远程仓库中所有分支的引用，可以随时合并或查看  ------ 必须注意  <code>git fetch </code>  命令会将数据拉取到你的本地仓库 - 它并不会自动合并或修改你当前的工作。当准备好时你必须手动将其合并入你的工作。</p>
+<ul>
+<li><code>git megre  branch-name</code>    – 合并分支</li>
+</ul>
+</li>
+<li>
+<p><code>git push origin serverfix</code>  – 推送一个名为 <code>serverfix</code>  的分支到远程仓库上去</p>
+<ul>
+<li><code>git push origin serverfix:awesomebranch</code> 	  – 也可以在推送的时候修改名字</li>
+</ul>
+</li>
+<li>
+<p><code>git pull</code>  – 获取在本地上没有远程仓库的资料 即  <code>拉取数据</code></p>
+</li>
+<li>
+<p><code>git  push  </code>  – 推送本地资料到远程仓库上面去</p>
+<ul>
+<li><code>git push remote-name  branch-name</code>   – 也可以指定推送的分支和要推送的分支到远程仓库上</li>
+</ul>
+</li>
+<li>
+<p><code>git branch -u   remotename/branchname</code>  – 在当前分支跟踪 远程仓库的分支</p>
+</li>
+<li>
+<p><code>git checkout -b serverfix origin/serverfix</code>   – 创建分支的同时跟踪远程分支（其他协作者）</p>
+<ul>
+<li><code>git checkout --track origin/serverfix</code>    – 这是一个十分常用的操作所以 Git 提供了 --track 快捷方式 — serverfix 别名和跟踪分支名一样</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<hr>
+<ul>
+<li><code>git push origin --delete serverfix</code> 	 –  // 删除远程分支</li>
+<li><code>git remote prune origin --dry-run</code>   – // 列出仍在远程跟踪但是远程已被删除的无用分支</li>
+<li><code>git remote prune origin </code>   – // 清除上面命令列出来的远程跟踪</li>
+</ul>
+<h1 id="pull-request-流程"><a class="markdownIt-Anchor" href="#pull-request-流程">#</a> pull request 流程</h1>
+<p><strong>如果你想要参与某个项目，但是并没有推送权限，这时可以对这个项目进行 “派生”（Fork）。 派生的意思是指，GitHub 将在你的空间中创建一个完全属于你的项目副本，且你对其具有推送权限。通过这种方式，项目的管理者不再需要忙着把用户添加到贡献者列表并给予他们推送权限。 人们可以派生这个项目，将修改推送到派生出的项目副本中，并通过创建合并请求（Pull Request）来让他们的改动进入源版本库。</strong><br>
+基本流程：</p>
+<ol>
+<li>从 master 分支中创建一个新分支 （自己 fork 的项目）</li>
+<li>提交一些修改来改进项目 （自己 fork 的项目）</li>
+<li>将这个分支推送到 GitHub 上 （自己 fork 的项目）</li>
+<li>创建一个合并请求</li>
+<li>讨论，根据实际情况继续修改</li>
+<li>项目的拥有者合并或关闭你的合并请求<br>
+注意点：<br>
+每次在发起新的 Pull Request 时 要去拉取最新的源仓库的代码<br>
+而不是自己 fork 的那个仓库。</li>
+</ol>
+<ul>
+<li>git remote add &lt;shortname 源仓库&gt; &lt;url 源仓库 &gt;</li>
+<li>git fetch 远程仓库名字</li>
+<li>git merge 对应的远程跟踪分支</li>
+</ul>
+<hr>
+<h2 id="三个必须懂得概念"><a class="markdownIt-Anchor" href="#三个必须懂得概念">#</a> 三个必须懂得概念</h2>
+<p>本地分支<br>
+远程跟踪分支 (remote / 分支名)<br>
+ 远程分支</p>
+<h2 id="远程协作的基本流程"><a class="markdownIt-Anchor" href="#远程协作的基本流程">#</a> 远程协作的基本流程</h2>
+<p>第一步：项目经理创建一个空的远程仓库<br>
+第二步：项目经理创建一个待推送的本地仓库<br>
+第三步：为远程仓库配别名  配完用户名 邮箱<br>
+第四步：在本地仓库中初始化代码 提交代码<br>
+第五步：推送<br>
+第六步：邀请成员<br>
+第七步：成员克隆远程仓库<br>
+第八步：成员做出修改<br>
+第九步：成员推送自己的修改<br>
+第十步：项目经理拉取成员的修改</p>
+<h2 id="做跟踪"><a class="markdownIt-Anchor" href="#做跟踪">#</a> 做跟踪</h2>
+<p>克隆才仓库时 会自动为 master 做跟踪<br>
+本地没有分支<br>
+ git checkout --track 远程跟踪分支 (remote / 分支名)<br>
+ 本地已经创建了分支<br>
+ git branch -u 远程跟踪分支 (remote / 分支名)</p>
+<h2 id="推送"><a class="markdownIt-Anchor" href="#推送">#</a> 推送</h2>
+<p>git push</p>
+<h2 id="拉取"><a class="markdownIt-Anchor" href="#拉取">#</a> 拉取</h2>
+<p>git pull</p>
+<h2 id="pull-request"><a class="markdownIt-Anchor" href="#pull-request">#</a> pull request</h2>
+<p>让第三方人员参与到项目中 fork</p>
+<h2 id="使用频率最高的五个命令"><a class="markdownIt-Anchor" href="#使用频率最高的五个命令">#</a> 使用频率最高的五个命令</h2>
+<p>git status<br>
+git add<br>
+git commit<br>
+git push<br>
+git pull</p>
+<h1 id="远程分支"><a class="markdownIt-Anchor" href="#远程分支">#</a> 远程分支</h1>
+<h2 id="远程跟踪分支"><a class="markdownIt-Anchor" href="#远程跟踪分支">#</a> 远程跟踪分支</h2>
+<h2 id="本地分支"><a class="markdownIt-Anchor" href="#本地分支">#</a> 本地分支</h2>
+<p>正常的数据推送 和 拉取步骤</p>
+<ol>
+<li>确保本地分支已经跟踪了远程跟踪分支</li>
+<li>拉取数据 : git pull</li>
+<li>上传数据: git push</li>
+</ol>
+<p>一个本地分支怎么去跟踪一个远程跟踪分支</p>
+<ol>
+<li>当克隆的时候 会自动生成一个 master 本地分支 (已经跟踪了对应的远程跟踪分支)</li>
+<li>在新建其他分支时 可以指定想要跟踪的远程跟踪分支<br>
+ git checkout -b 本地分支名 远程跟踪分支名<br>
+ git checkout --track  远程跟踪分支名</li>
+<li>将一个已经存在的本地分支 改成 一个跟踪分支<br>
+ git branch -u 远程跟踪分支名</li>
+</ol>
+<h2 id="团队协作"><a class="markdownIt-Anchor" href="#团队协作">#</a> 团队协作</h2>
+<ol>
+<li>
+<p>项目经理初始化远程仓库<br>
+一定要初始化一个空的仓库；在 github 上操作</p>
+</li>
+<li>
+<p>项目经理创建本地仓库<br>
+ git remote 别名 仓库地址 (https)<br>
+ git init ; 将源码复制进来<br>
+修改用户名 修改邮箱<br>
+ git add<br>
+git commit</p>
+</li>
+<li>
+<p>项目经理推送本地仓库到远程仓库<br>
+清理 windows 凭据<br>
+ git push  别名 分支  (输入用户名 密码；推完之后会附带生成远程跟踪分支)</p>
+</li>
+<li>
+<p>项目邀请成员 &amp; 成员接受邀请<br>
+在 github 上操作</p>
+</li>
+<li>
+<p>成员克隆远程仓库<br>
+ git clone  仓库地址 (在本地生成.git 文件 默认为远程仓库配了别名 orgin)<br>
+ 只有在克隆的时候 本地分支 master 和 远程跟踪分支别名 /master 是有同步关系的</p>
+</li>
+<li>
+<p>成员做出贡献<br>
+修改源码文件<br>
+ git add<br>
+git commit<br>
+git push  别名 分支 (输入用户名 密码；推完之后会附带生成远程跟踪分支)</p>
+</li>
+<li>
+<p>项目经理更新修改<br>
+ git fetch 别名 (将修改同步到远程跟踪分支上)<br>
+ git merge 远程跟踪分支</p>
+</li>
+</ol>
+<h2 id="冲突"><a class="markdownIt-Anchor" href="#冲突">#</a> 冲突</h2>
+<p>git 本地操作会不会有冲突？<br>
+ 典型合并的时候<br>
+ git 远程协作的时候 会不会有冲突？<br>
+push<br>
+pull<br>
+ 修改再提交</p>
+<h2 id="忽略某些文件"><a class="markdownIt-Anchor" href="#忽略某些文件">#</a> 忽略某些文件</h2>
+<ul>
+<li><code>.gitignore</code>  文件  写上条件 如 ： 文件夹  或 正则表达式</li>
+</ul>
+<h1 id="ssh"><a class="markdownIt-Anchor" href="#ssh">#</a> SSH</h1>
+<p><code>ssh-keygen –t rsa –C 你的邮箱：生成公私钥</code> <br>
+.ssh 文件位置： <code>C:\Users\Administrator\.ssh</code> <br>
+ <code>ssh -T git@github.com</code>  ：测试公私钥是否已经配对</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">神奈川</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://blog.lianghj.top/2022/06/15/tools/git/">http://blog.lianghj.top/2022/06/15/tools/git/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">神奈川</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/javascript/">
+                                    <span class="chip bg-color">javascript</span>
+                                </a>
+                            
+                                <a href="/tags/git/">
+                                    <span class="chip bg-color">git</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/06/15/tools/gong-ju-ku/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="工具库 &amp; 编辑器插件">
+                        
+                        <span class="card-title">工具库 &amp; 编辑器插件</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            简介
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/tools/">
+                        <span class="chip bg-color">tools</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/06/15/tools/git/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="git">
+                        
+                        <span class="card-title">git</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            git 分布式管理
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
+                    </a>
+                    
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <a href="/about" target="_blank">lysimportant</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
+    
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载swiper')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script>
+<style></style><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><!-- hexo injector body_end end --></body>
+
+</html>
