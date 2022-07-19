@@ -485,17 +485,15 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p>setState 一般情况下是异步的，但在 dom 的事件或者 setTimeout 中是同步的</p>
+<p>setState 一般情况下是异步的,但在dom的事件或者setTimeout中是同步的</p>
 </blockquote>
 <ul>
-<li>类组件
-<ul>
-<li>手动阻断 render 更新 : shouldComponentUpdate (nextProps, nextState) true 更新 false 不更新</li>
-<li>PureComponent 自动判断阻止 render</li>
+<li>类组件<ul>
+<li>手动阻断 render 更新 : shouldComponentUpdate(nextProps, nextState) true 更新 false 不更新</li>
+<li>PureComponent 自动判断阻止render</li>
 </ul>
 </li>
-<li>函数组件
-<ul>
+<li>函数组件<ul>
 <li>memo 包裹函数组件返回一个新的函数组件</li>
 </ul>
 </li>
@@ -505,22 +503,20 @@
 </blockquote>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> EventEmitter <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"events"</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> eventBus <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EventEmitter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <blockquote>
-<p>refs 字符串 函数 对象 可以获取类组件的 ref 但是函数组件不行因为它们并没有实例</p>
+<p>refs 字符串 函数 对象 可以获取类组件的ref但是函数组件不行因为它们并没有实例</p>
 </blockquote>
-<h2 id="hoc-高阶组件"><a class="markdownIt-Anchor" href="#hoc-高阶组件">#</a> HOC 高阶组件</h2>
+<h2 id="HOC-高阶组件"><a href="#HOC-高阶组件" class="headerlink" title="HOC 高阶组件"></a>HOC 高阶组件</h2><blockquote>
+<p>高阶组件(HOC)的参数是组件,返回值为新组件的函数</p>
+</blockquote>
 <blockquote>
-<p>高阶组件 (HOC) 的参数是组件，返回值为新组件的函数</p>
+<p>把组件接受的参数全传递下去  &lt;Com {…this.props} &#x2F;&gt; | tontext | redux</p>
 </blockquote>
-<blockquote>
-<p>把组件接受的参数全传递下去  &lt;Com {…this.props} /&gt; | tontext | redux</p>
+<h2 id="绑定函数的三种方式"><a href="#绑定函数的三种方式" class="headerlink" title="绑定函数的三种方式"></a>绑定函数的三种方式</h2><blockquote>
+<p>React 类中写 bind () &#x3D;&gt;  () &#x3D;&gt; </p>
 </blockquote>
-<h2 id="绑定函数的三种方式"><a class="markdownIt-Anchor" href="#绑定函数的三种方式">#</a> 绑定函数的三种方式</h2>
-<blockquote>
-<p>React 类中写 bind () =&gt;  () =&gt;</p>
-</blockquote>
-<h2 id="classnames"><a class="markdownIt-Anchor" href="#classnames">#</a> classnames</h2>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">
+<h2 id="classnames"><a href="#classnames" class="headerlink" title="classnames"></a>classnames</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">
 <span class="token keyword">import</span> <span class="token constant">CNS</span> <span class="token keyword">from</span> <span class="token string">'classnames'</span><span class="token punctuation">;</span>
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">PureComponent</span><span class="token operator">&lt;</span>any<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">isActive</span><span class="token operator">:</span> boolean<span class="token punctuation">&#125;</span><span class="token operator">></span> <span class="token punctuation">&#123;</span>
   <span class="token function">constructor</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">props</span><span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -550,6 +546,7 @@
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">  <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">&#123;</span>
     <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
       <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span>
@@ -599,7 +596,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">cre
   <span class="token punctuation">&#125;</span>
 ReactDOM<span class="token punctuation">.</span><span class="token function">createRoot</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
-<p>第三种 模板箭头函数 函数调用的方式：方便传值</p>
+<p>第三种 模板箭头函数 函数调用的方式: 方便传值</p>
 </blockquote>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">  <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">&#123;</span>
     <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -623,32 +620,29 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">cre
 
   <span class="token punctuation">&#125;</span>
 ReactDOM<span class="token punctuation">.</span><span class="token function">createRoot</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="组件分类"><a class="markdownIt-Anchor" href="#组件分类">#</a> 组件分类</h2>
-<ul>
-<li>React 的组件相对于 Vue 更加的灵活和多样，按照不同的方式可以分成很多类组件：</li>
+
+<h2 id="组件分类"><a href="#组件分类" class="headerlink" title="组件分类"></a>组件分类</h2><ul>
+<li>React的组件相对于Vue更加的灵活和多样，按照不同的方式可以分成很多类组件：</li>
 </ul>
 <ol>
-<li>根据组件的定义方式，可以分为：函数组件 (Functional Component) 和类组件 (Class Component)；</li>
-<li>根据组件内部是否有状态需要维护，可以分成：无状态组件 (Stateless Component) 和有状态组件 (Stateful Component)；</li>
-<li>根据组件的不同职责，可以分成：展示型组件 (Presentational Component) 和容器型组件 (Container Component)；</li>
+<li>根据组件的定义方式，可以分为：函数组件(Functional Component )和类组件(Class Component)；</li>
+<li>根据组件内部是否有状态需要维护，可以分成：无状态组件(Stateless Component )和有状态组件(Stateful Component)；</li>
+<li>根据组件的不同职责，可以分成：展示型组件(Presentational Component)和容器型组件(Container Component)；</li>
 </ol>
 <ul>
-<li>这些概念有很多重叠，但是他们最主要是关注数据逻辑和 UI 展示的分离：
-<ol>
-<li>函数组件、无状态组件、展示型组件主要关注 UI 的展示；</li>
+<li>这些概念有很多重叠，但是他们最主要是关注数据逻辑和UI展示的分离：<ol>
+<li>函数组件、无状态组件、展示型组件主要关注UI的展示；</li>
 <li>类组件、有状态组件、容器型组件主要关注数据逻辑；</li>
 </ol>
 </li>
 </ul>
-<h2 id="react-生命周期-图"><a class="markdownIt-Anchor" href="#react-生命周期-图">#</a> React 生命周期 <a href="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/">图</a></h2>
-<ol>
+<h2 id="React-生命周期-图"><a href="#React-生命周期-图" class="headerlink" title="React 生命周期 图"></a>React 生命周期 <a href="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/">图</a></h2><ol>
 <li>componentDidMount 挂载后</li>
 <li>getSnapshotBeforeUpdate 更新前</li>
-<li>componentDidUpdate (prevProps, prevState, snapshot) 更新后</li>
+<li>componentDidUpdate(prevProps, prevState, snapshot) 更新后</li>
 <li>componentWillUnmount 卸载后</li>
 </ol>
-<h2 id="父子传值"><a class="markdownIt-Anchor" href="#父子传值">#</a> 父子传值</h2>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 类 子组件</span>
+<h2 id="父子传值"><a href="#父子传值" class="headerlink" title="父子传值"></a>父子传值</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 类 子组件</span>
 <span class="token keyword">class</span> <span class="token class-name">ChildCpn</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">&#123;</span>
   <span class="token comment">// 默认实现了此操作 可</span>
   <span class="token comment">// constructor(props) &#123;</span>
@@ -664,6 +658,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">cre
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <blockquote>
 <p>函数 子组件</p>
 </blockquote>
@@ -687,8 +682,8 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">cre
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="组件传值验证-默认值-prop-types"><a class="markdownIt-Anchor" href="#组件传值验证-默认值-prop-types">#</a> 组件传值验证 &amp; 默认值 prop-types</h3>
-<blockquote>
+
+<h3 id="组件传值验证-amp-默认值-prop-types"><a href="#组件传值验证-amp-默认值-prop-types" class="headerlink" title="组件传值验证 &amp; 默认值 prop-types"></a>组件传值验证 &amp; 默认值 prop-types</h3><blockquote>
 <p>函数组件</p>
 </blockquote>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
@@ -733,6 +728,7 @@ ChildCpn<span class="token punctuation">.</span>defaultProps <span class="token 
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <blockquote>
 <p>类组件</p>
 </blockquote>
@@ -751,8 +747,8 @@ Child2<span class="token punctuation">.</span>propTypes <span class="token opera
   <span class="token literal-property property">name</span><span class="token operator">:</span> propTypes<span class="token punctuation">.</span>string<span class="token punctuation">.</span>isRequired<span class="token punctuation">,</span>
   <span class="token literal-property property">age</span><span class="token operator">:</span> propTypes<span class="token punctuation">.</span>number<span class="token punctuation">,</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="组件通信案例"><a class="markdownIt-Anchor" href="#组件通信案例">#</a> 组件通信案例</h3>
-<blockquote>
+
+<h3 id="组件通信案例"><a href="#组件通信案例" class="headerlink" title="组件通信案例"></a>组件通信案例</h3><blockquote>
 <p>父组件</p>
 </blockquote>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> Component <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
@@ -784,6 +780,7 @@ Child2<span class="token punctuation">.</span>propTypes <span class="token opera
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <blockquote>
 <p>子组件</p>
 </blockquote>
@@ -837,8 +834,8 @@ TabControl<span class="token punctuation">.</span>defaultPorps <span class="toke
   <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="跨组件通讯"><a class="markdownIt-Anchor" href="#跨组件通讯">#</a> 跨组件通讯</h2>
-<blockquote>
+
+<h2 id="跨组件通讯"><a href="#跨组件通讯" class="headerlink" title="跨组件通讯"></a>跨组件通讯</h2><blockquote>
 <p>使用 props 传值</p>
 </blockquote>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">
@@ -894,13 +891,13 @@ TabControl<span class="token punctuation">.</span>defaultPorps <span class="toke
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="context-api"><a class="markdownIt-Anchor" href="#context-api">#</a> Context API</h2>
-<ol>
-<li>React.createContext () 创建 context</li>
+
+
+<h2 id="Context-API"><a href="#Context-API" class="headerlink" title="Context API"></a>Context API</h2><ol>
+<li>React.createContext() 创建context</li>
 <li>React.Provider 包裹组件</li>
 </ol>
-<h3 id="类组件使用"><a class="markdownIt-Anchor" href="#类组件使用">#</a> 类组件使用</h3>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> Component <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<h3 id="类组件使用"><a href="#类组件使用" class="headerlink" title="类组件使用"></a>类组件使用</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> Component <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> MyContext <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
   <span class="token literal-property property">conter</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
   <span class="token function-variable function">increment</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
@@ -960,8 +957,8 @@ Two<span class="token punctuation">.</span>contextType <span class="token operat
 <span class="token punctuation">&#125;</span>
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="函数组件的使用"><a class="markdownIt-Anchor" href="#函数组件的使用">#</a> 函数组件的使用</h3>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> Component <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+
+<h3 id="函数组件的使用"><a href="#函数组件的使用" class="headerlink" title="函数组件的使用"></a>函数组件的使用</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> Component <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> MyContext <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
   <span class="token literal-property property">conter</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
   <span class="token function-variable function">increment</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
@@ -1022,8 +1019,8 @@ Two<span class="token punctuation">.</span>contextType <span class="token operat
 <span class="token punctuation">&#125;</span>
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="多个context的使用推荐使用-redux"><a class="markdownIt-Anchor" href="#多个context的使用推荐使用-redux">#</a> 多个 context 的使用 (推荐使用 Redux)</h3>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> Component <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+
+<h3 id="多个context的使用-推荐使用-Redux"><a href="#多个context的使用-推荐使用-Redux" class="headerlink" title="多个context的使用(推荐使用 Redux)"></a>多个context的使用(推荐使用 Redux)</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> Component <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> MyContext <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
   <span class="token literal-property property">conter</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
   <span class="token function-variable function">increment</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
@@ -1096,31 +1093,48 @@ Two<span class="token punctuation">.</span>contextType <span class="token operat
 <span class="token punctuation">&#125;</span>
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="redux"><a class="markdownIt-Anchor" href="#redux">#</a> Redux</h2>
-<ul>
-<li>单一数据源
-<ul>
-<li>整个应用程序的 state 被存储在一颗 object tree 中，并且这个 object tree 只存储在一个 store 中：</li>
-<li>Redux 并没有强制让我们不能创建多个 Store，但是那样做并不利于数据的维护；</li>
-<li>单一的数据源可以让整个应用程序的 state 变得方便维护、追踪、修改；</li>
-</ul>
-</li>
-<li>State 是只读的
-<ul>
-<li>唯一修改 State 的方法一定是触发 action，不要试图在其他地方通过任何的方式来修改 State：</li>
-<li>这样就确保了 View 或网络请求都不能直接修改 state，它们只能通过 action 来描述自己想要如何修改 state；</li>
-<li>这样可以保证所有的修改都被集中化处理，并且按照严格的顺序来执行，所以不需要担心 race condition（竟态）的问题；</li>
-</ul>
-</li>
-<li>使用纯函数来执行修改
-<ul>
-<li>通过 reducer 将 旧 state 和 actions 联系在一起，并且返回一个新的 State：</li>
-<li>随着应用程序的复杂度增加，我们可以将 reducer 拆分成多个小的 reducers，分别操作不同 state tree 的一部分；</li>
-<li>但是所有的 reducer 都应该是纯函数，不能产生任何的副作用；</li>
-</ul>
-</li>
-</ul>
 
+
+<h2 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h2><ul>
+<li>单一数据源<ul>
+<li>整个应用程序的state被存储在一颗object tree中，并且这个object tree只存储在一个 store 中：</li>
+<li>Redux并没有强制让我们不能创建多个Store，但是那样做并不利于数据的维护；</li>
+<li>单一的数据源可以让整个应用程序的state变得方便维护、追踪、修改；</li>
+</ul>
+</li>
+<li>State是只读的<ul>
+<li>唯一修改State的方法一定是触发action，不要试图在其他地方通过任何的方式来修改State：</li>
+<li>这样就确保了View或网络请求都不能直接修改state，它们只能通过action来描述自己想要如何修改state；</li>
+<li>这样可以保证所有的修改都被集中化处理，并且按照严格的顺序来执行，所以不需要担心race condition（竟态）的问题；</li>
+</ul>
+</li>
+<li>使用纯函数来执行修改<ul>
+<li>通过reducer将 旧state和 actions联系在一起，并且返回一个新的State：</li>
+<li>随着应用程序的复杂度增加，我们可以将reducer拆分成多个小的reducers，分别操作不同state tree的一部分；</li>
+<li>但是所有的reducer都应该是纯函数，不能产生任何的副作用；</li>
+</ul>
+</li>
+</ul>
+<h3 id="RTK"><a href="#RTK" class="headerlink" title="RTK"></a>RTK</h3><ul>
+<li>API 回调</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> result <span class="token operator">=</span> use<span class="token operator">~</span><span class="token operator">~</span><span class="token function">Query</span> <span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
+  <span class="token function-variable function">selectFromResult</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">pollingInterval</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">// 轮询时间 单位毫秒 聊天可用</span>
+  <span class="token literal-property property">sikp</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>  <span class="token comment">// 设置是否跳过请求</span>
+  <span class="token literal-property property">refetchOnMountOrArgChange</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token operator">|</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">// 设置是否缓存 fasle 缓存 true 不缓存每次请求数据, 数字秒数 几秒内缓存</span>
+  <span class="token literal-property property">refetchOnFocus</span><span class="token operator">:</span> fasle<span class="token punctuation">,</span> <span class="token comment">// 重新获取页面焦点时重新获取数据</span>
+  <span class="token literal-property property">refetchOnReconnect</span><span class="token operator">:</span> fasle <span class="token comment">// 是否网络重新链接请求数据</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">&#123;</span> refetch<span class="token punctuation">,</span> isLoading<span class="token punctuation">,</span> isFetching<span class="token punctuation">,</span> isSuccess<span class="token punctuation">,</span> data<span class="token punctuation">,</span> isUninteiallized <span class="token punctuation">&#125;</span> <span class="token operator">=</span> result
+<span class="token comment">// refetch 函数重新加载数据</span>
+<span class="token comment">// isLoading 第一次加载数据</span>
+<span class="token comment">// isFetching 数据加载</span>
+<span class="token comment">// data 最新数据</span>
+<span class="token comment">// isUninteialized 数据是否开始发送</span>
+<span class="token comment">// isSuccess 成功获取数据</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="generator"><a href="#generator" class="headerlink" title="generator"></a>generator</h2>
                 
             </div>
             <hr/>
